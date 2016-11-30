@@ -22,13 +22,7 @@ wss.on('connection', function (ws) {
     try {
         ws.send('something')
 
-        wss.clients.forEach(function each(client) {
-            if (client !== ws) {
-                client.send('something')
-            } else {
-                client.send('something')
-            }
-        })
+        wss.broadcast('something')
     } catch (err) {
         console.error('send error: ', err)
     }

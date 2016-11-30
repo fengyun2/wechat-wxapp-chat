@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/chat/chat",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "简易聊天室",
+    "navigationBarTextStyle":"black"
+  }
+}

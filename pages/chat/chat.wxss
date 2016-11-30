@@ -1,0 +1,126 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 5px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.main-chat {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat-system-notice-area {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.msg-items {
+  overflow: auto;
+  padding-bottom: 40px;
+}
+
+.chat-item {
+  display: block;
+}
+
+.msg-box {
+  margin-bottom: 10px;
+}
+
+.chat-item .avatar {
+  float: left;
+  margin-right: 7px;
+}
+
+.chat-item.me .avatar {
+  float: right;
+  margin-left: 7px;
+}
+
+.chat-item .avatar .user-avatar {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+}
+
+.chat-item .msg-bubble-box {
+  float: left;
+}
+
+.chat-item.me .msg-bubble-box {
+  float: right;
+}
+
+.chat-item .msg-bubble-area {
+  float: left;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.chat-item.me .msg-bubble-area {
+  float: right;
+  padding-left: 40px;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+.chat-item .msg-bubble {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  min-height: 38px;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: rgb(56, 173, 255);
+  border-radius: 6px;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.chat-item .msg-bubble .text {
+  line-height: 1.5;
+}
+
+.send-msg-box-wrapper {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.send-msg-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-area {
+  border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,211 @@
+<view class="container">
+  <view class="main-chat">
+    <view class="msg-items">
+      <view class="chat-status chat-system-notice-area">
+        <view class="chat-system-notice">系统消息: 欢迎 LY {{text}} 加入群聊</view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item me">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item me">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item me">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 每条信息 -->
+      <view class="msg-box">
+        <view class="chat-item">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="send-msg-box-wrapper">
+      <view class="send-msg-box">
+        <view class="voice">
+          <button type="primary" size="mini" class="add-user-btn">新加</button>
+        </view>
+        <view class="input-area">
+          <input type="text" class="msg-content" />
+        </view>
+        <view class="btn-area">
+          <button type="primary" size="mini" class="send-msg-btn">发送</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 消息模板 -->
+  <template name="msg-box">
+    <!-- 每条信息 -->
+    <view class="msg-box">
+      <view class="chat-item">
+        <view class="clearfix">
+          <view class="avatar">
+            <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+          </view>
+          <view class="msg-bubble-box">
+            <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble">
+                <text class="text">你好, 先生</text>
+              </view>
+            </div>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>

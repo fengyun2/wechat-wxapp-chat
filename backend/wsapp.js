@@ -5,29 +5,52 @@ const WebSocketServer = require('ws').Server,
     })
 
 // 广播
-wss.broadcast = function broadcast (data) {
+wss.broadcast = function broadcast (type = 1, ws) {
     wss.clients.forEach(function each(client) {
-        client.send(data)
+        switch (type) {
+            case 1: {
+                client.send(ws.name + ': '+ ws.msg)
+                break
+            }
+            case 0: {
+                client.send(ws + '退出聊天室')
+            }
+        }
     })
 }
 
 wss.on('connection', function (ws) {
     console.log('client connected')
-        // ws.send(JSON.stringify({
-        //     name: '云仔',
-        //     age: 20,
-        //     sex: 'man',
-        //     address: '广州'
-        // }))
+    console.log(`您是第 ${wss.clients.length} 位`)
+    ws.send(`您是第 ${wss.clients.length} 位`)
     try {
-        ws.send('something')
+        wss.broadcast(JSON.stringify({
+            name: '云仔',
+            age: 20,
+            sex: 'man',
+            address: '广州'
+        }))
 
-        wss.broadcast('something')
     } catch (err) {
         console.error('send error: ', err)
     }
-    ws.on('message', function (message) {
-        console.log('received: %s ', message)
+    // 接受信息/发送
+    ws.on('message', function (json) {
+        // console.log('received: %s ', message)
+        const obj = JSON.parse(json)
+        this.user = obj
+        if (typeof this.user.msg != 'undefined') {
+            wss.broadcast(1, obj)
+        }
     })
+    // 退出聊天
+    ws.on('close', function () {
+        try {
+            wss.broadcast(0, this.user.name)
+        } catch (e) {
+            console.log('刷新页面了')
+        }
+    })
+
 
 })

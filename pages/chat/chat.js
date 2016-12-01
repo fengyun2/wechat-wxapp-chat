@@ -27,75 +27,72 @@ Page({
       that.setData({
         totalPeoples: that.data.totalPeoples
       })
-
-    console.log(`totalPeople >>>`)
-    console.log(this.data.totalPeoples)
     })
 
 
-    // // 创建一个 socket 连接(必须是wss协议)
-    // wx.connectSocket({
-    //   // url: 'ws://localhost',
-    //   url: 'wss://dev.321zou.com', // 这个地址需要appid管理员设置才行, 切记
-    //   data: {
-    //     x: '',
-    //     y: ''
-    //   },
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   method: 'GET',
-    //   success: function (res) {
-    //     console.log('connect success: ', res)
-    //   },
-    //   complete: function (res) {
-    //     console.log('complete: ', res)
-    //   },
-    //   fail: function (err) {
-    //     console.log('connect error: ', err)
-    //   }
-    // })
+    // 创建一个 socket 连接(必须是wss协议)
+    wx.connectSocket({
+      // url: 'ws://localhost',
+      url: 'wss://dev.321zou.com', // 这个地址需要appid管理员设置才行, 切记
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log('connect success: ', res)
+      },
+      complete: function (res) {
+        console.log('complete: ', res)
+      },
+      fail: function (err) {
+        console.log('connect error: ', err)
+      }
+    })
 
-    // // 监听websocket打开事件
-    // wx.onSocketOpen(function (res) {
-    //   console.log('WebSocket连接已经打开!')
+    // 监听websocket打开事件
+    wx.onSocketOpen(function (res) {
+      console.log('WebSocket连接已经打开!')
 
-    //   socketOpen = true
-    //   for (var i = 0, len = socketMsgQueue.length; i < len; i++) {
-    //     sendSocketMessage(socketMsgQueue[i])
-    //   }
+      socketOpen = true
+      for (var i = 0, len = socketMsgQueue.length; i < len; i++) {
+        sendSocketMessage(socketMsgQueue[i])
+      }
 
-    //   // 关闭socket
-    //   wx.closeSocket()
-    //     // socketMsgQueue = []
-    // })
+      // 关闭socket
+      wx.closeSocket()
+        // socketMsgQueue = []
+    })
 
-    // function sendSocketMessage(msg) {
-    //   if (socketOpen) {
-    //     wx.sendSocketMessage({
-    //       data: msg
-    //     })
-    //   } else {
-    //     socketMsgQueue.push(msg)
-    //   }
-    // }
+    function sendSocketMessage(msg) {
+      if (socketOpen) {
+        wx.sendSocketMessage({
+          data: msg
+        })
+      } else {
+        socketMsgQueue.push(msg)
+      }
+    }
 
-    // // 监听WebSocket错误
-    // wx
-    //   .onSocketError(function (res) {
-    //     console.log('WebSocket连接打开失败, 请检查!')
-    //   })
+    // 监听WebSocket错误
+    wx
+      .onSocketError(function (res) {
+        console.log('WebSocket连接打开失败, 请检查!')
+      })
 
-    // // wx.sendSocketMessage 通过WebSocket连接发送数据, 需要先先 wx.connectSocket, 并在
-    // // wx.onSocketOpen 回调之后才能发送 监听WebSocket 接收到拂去其的消息事件
-    // wx.onSocketMessage(function (res) {
-    //   console.log('收到服务器内容: ' + res.data)
-    // })
+    // wx.sendSocketMessage 通过WebSocket连接发送数据, 需要先先 wx.connectSocket, 并在
+    // wx.onSocketOpen 回调之后才能发送 监听WebSocket 接收到拂去其的消息事件
+    wx.onSocketMessage(function (res) {
+      console.log('收到服务器内容: ' + res.data)
+    })
 
-    // // 关闭WebSocket连接 监听websocket连接
-    // wx.onSocketClose(function (res) {
-    //   console.log('WebSocket 已关闭!')
-    // })
+    // 关闭WebSocket连接 监听websocket连接
+    wx.onSocketClose(function (res) {
+      console.log('WebSocket 已关闭!')
+    })
   },
   onReady: function () {
     // 页面渲染完成

@@ -2,7 +2,7 @@
   <view class="main-chat">
     <view class="msg-items">
       <view class="chat-status chat-system-notice-area">
-        <view class="chat-system-notice">系统消息: 欢迎 LY {{text}} 加入群聊</view>
+        <view class="chat-system-notice">系统消息: 欢迎 {{ userInfo.nickName || 'LY' }} 加入群聊</view>
       </view>
       <!-- 每条信息 -->
       <view class="msg-box">
@@ -175,7 +175,7 @@
         </view>
       </view>
     </view>
-      <!--
+
     <view class="send-msg-box-wrapper">
       <view class="send-msg-box">
         <view class="voice">
@@ -189,11 +189,10 @@
         </view>
       </view>
     </view>
-    -->
+
   </view>
   <!-- 消息模板 -->
 
-  <!--
   <template name="msg-box">
     <view class="msg-box">
       <view class="chat-item">
@@ -212,4 +211,15 @@
       </view>
     </view>
   </template>
-  -->
+</view>
+
+<!--测试用例-->
+<!--<view class="container">
+  <view class="main-chat">
+    <view class="msg-items">
+      <view class="chat-status chat-system-notice-area">
+        <view class="chat-system-notice">系统消息: 欢迎 LY 加入群聊</view>
+      </view>
+    </view>
+  </view>
+</view>-->

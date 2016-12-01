@@ -4,7 +4,15 @@ let socketMsgQueue = ['name', 'age', 'sex', 'province', 'city']
 Page({
   data: {
     text: "Page chat",
-    userInfo: null,
+    userInfo: {
+      avatarUrl: "http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIkA9qaz2lcxe2S9qnYBghDNvC6On7EZIrzGjibhhIWMCAU0thQhUh6jItP4qa3fnkrGbqPkV5bicGA/0",
+      city: "Guangzhou",
+      country: "CN",
+      gender: 1,
+      language: "zh_CN",
+      nickName: "undefined",
+      province: "Guangdong"
+    },
     totalPeoples: []
   },
   onLoad(options) {
@@ -16,13 +24,15 @@ Page({
         .data
         .totalPeoples
         .push(res)
-      that.setData({totalPeoples: that.data.totalPeoples})
+      that.setData({
+        totalPeoples: that.data.totalPeoples
+      })
     })
 
     // 创建一个 socket 连接(必须是wss协议)
     wx.connectSocket({
-      // url: 'ws://localhost:3000',
-      url: 'ws://localhost:8000',
+      // url: 'ws://localhost',
+      url: 'wss://dev.321zou.com', // 这个地址需要appid管理员设置才行, 切记
       data: {
         x: '',
         y: ''
@@ -34,7 +44,7 @@ Page({
       success: function (res) {
         console.log('connect success: ', res)
       },
-      complete: function(res) {
+      complete: function (res) {
         console.log('complete: ', res)
       },
       fail: function (err) {
@@ -53,12 +63,14 @@ Page({
 
       // 关闭socket
       wx.closeSocket()
-      // socketMsgQueue = []
+        // socketMsgQueue = []
     })
 
     function sendSocketMessage(msg) {
       if (socketOpen) {
-        wx.sendSocketMessage({data: msg})
+        wx.sendSocketMessage({
+          data: msg
+        })
       } else {
         socketMsgQueue.push(msg)
       }
@@ -104,8 +116,12 @@ Page({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
-              that.setData({userInfo: res.userInfo})
-              that.setData({text: '个人信息'})
+              that.setData({
+                userInfo: res.userInfo
+              })
+              that.setData({
+                text: '个人信息'
+              })
               typeof cb == "function" && cb(that.data.userInfo)
             }
           })

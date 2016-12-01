@@ -196,7 +196,7 @@
       <view class="chat-item">
         <view class="clearfix">
           <view class="avatar">
-            <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            <div class="user-avatar"></div>
           </view>
           <view class="msg-bubble-box">
             <div class="msg-bubble-area clearfix">

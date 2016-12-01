@@ -1,7 +1,7 @@
 const WebSocketServer = require('ws').Server,
     url = require('url'),
     wss = new WebSocketServer({
-        port: 8000, // 监听端口
+        port: 80, // 监听端口
         verifyClient: socketVerify // 可选参数, 验证连接函数
     })
 

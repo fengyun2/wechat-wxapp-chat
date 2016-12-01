@@ -9,14 +9,14 @@
         <view class="chat-item me">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -26,14 +26,14 @@
         <view class="chat-item me">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -43,14 +43,14 @@
         <view class="chat-item me">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -60,14 +60,14 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -77,14 +77,14 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -94,14 +94,14 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -111,14 +111,14 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -128,14 +128,14 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -145,14 +145,14 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
@@ -162,19 +162,20 @@
         <view class="chat-item">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+              <view class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></view>
             </view>
             <view class="msg-bubble-box">
-              <div class="msg-bubble-area clearfix">
+              <view class="msg-bubble-area clearfix">
                 <view class="msg-bubble">
                   <text class="text">你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生你好, 先生</text>
                 </view>
-              </div>
+              </view>
             </view>
           </view>
         </view>
       </view>
     </view>
+      <!--
     <view class="send-msg-box-wrapper">
       <view class="send-msg-box">
         <view class="voice">
@@ -188,24 +189,27 @@
         </view>
       </view>
     </view>
+    -->
   </view>
   <!-- 消息模板 -->
+
+  <!--
   <template name="msg-box">
-    <!-- 每条信息 -->
     <view class="msg-box">
       <view class="chat-item">
         <view class="clearfix">
           <view class="avatar">
-            <div class="user-avatar"></div>
+            <view class="user-avatar"></view>
           </view>
           <view class="msg-bubble-box">
-            <div class="msg-bubble-area clearfix">
+            <view class="msg-bubble-area clearfix">
               <view class="msg-bubble">
                 <text class="text">你好, 先生</text>
               </view>
-            </div>
+            </view>
           </view>
         </view>
       </view>
     </view>
   </template>
+  -->

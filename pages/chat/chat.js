@@ -15,7 +15,7 @@ Page({
     },
     totalPeoples: []
   },
-  onLoad(options) {
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
 
     const that = this
@@ -27,71 +27,75 @@ Page({
       that.setData({
         totalPeoples: that.data.totalPeoples
       })
+
+    console.log(`totalPeople >>>`)
+    console.log(this.data.totalPeoples)
     })
 
-    // 创建一个 socket 连接(必须是wss协议)
-    wx.connectSocket({
-      // url: 'ws://localhost',
-      url: 'wss://dev.321zou.com', // 这个地址需要appid管理员设置才行, 切记
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      method: 'GET',
-      success: function (res) {
-        console.log('connect success: ', res)
-      },
-      complete: function (res) {
-        console.log('complete: ', res)
-      },
-      fail: function (err) {
-        console.log('connect error: ', err)
-      }
-    })
 
-    // 监听websocket打开事件
-    wx.onSocketOpen(function (res) {
-      console.log('WebSocket连接已经打开!')
+    // // 创建一个 socket 连接(必须是wss协议)
+    // wx.connectSocket({
+    //   // url: 'ws://localhost',
+    //   url: 'wss://dev.321zou.com', // 这个地址需要appid管理员设置才行, 切记
+    //   data: {
+    //     x: '',
+    //     y: ''
+    //   },
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   method: 'GET',
+    //   success: function (res) {
+    //     console.log('connect success: ', res)
+    //   },
+    //   complete: function (res) {
+    //     console.log('complete: ', res)
+    //   },
+    //   fail: function (err) {
+    //     console.log('connect error: ', err)
+    //   }
+    // })
 
-      socketOpen = true
-      for (var i = 0, len = socketMsgQueue.length; i < len; i++) {
-        sendSocketMessage(socketMsgQueue[i])
-      }
+    // // 监听websocket打开事件
+    // wx.onSocketOpen(function (res) {
+    //   console.log('WebSocket连接已经打开!')
 
-      // 关闭socket
-      wx.closeSocket()
-        // socketMsgQueue = []
-    })
+    //   socketOpen = true
+    //   for (var i = 0, len = socketMsgQueue.length; i < len; i++) {
+    //     sendSocketMessage(socketMsgQueue[i])
+    //   }
 
-    function sendSocketMessage(msg) {
-      if (socketOpen) {
-        wx.sendSocketMessage({
-          data: msg
-        })
-      } else {
-        socketMsgQueue.push(msg)
-      }
-    }
+    //   // 关闭socket
+    //   wx.closeSocket()
+    //     // socketMsgQueue = []
+    // })
 
-    // 监听WebSocket错误
-    wx
-      .onSocketError(function (res) {
-        console.log('WebSocket连接打开失败, 请检查!')
-      })
+    // function sendSocketMessage(msg) {
+    //   if (socketOpen) {
+    //     wx.sendSocketMessage({
+    //       data: msg
+    //     })
+    //   } else {
+    //     socketMsgQueue.push(msg)
+    //   }
+    // }
 
-    // wx.sendSocketMessage 通过WebSocket连接发送数据, 需要先先 wx.connectSocket, 并在
-    // wx.onSocketOpen 回调之后才能发送 监听WebSocket 接收到拂去其的消息事件
-    wx.onSocketMessage(function (res) {
-      console.log('收到服务器内容: ' + res.data)
-    })
+    // // 监听WebSocket错误
+    // wx
+    //   .onSocketError(function (res) {
+    //     console.log('WebSocket连接打开失败, 请检查!')
+    //   })
 
-    // 关闭WebSocket连接 监听websocket连接
-    wx.onSocketClose(function (res) {
-      console.log('WebSocket 已关闭!')
-    })
+    // // wx.sendSocketMessage 通过WebSocket连接发送数据, 需要先先 wx.connectSocket, 并在
+    // // wx.onSocketOpen 回调之后才能发送 监听WebSocket 接收到拂去其的消息事件
+    // wx.onSocketMessage(function (res) {
+    //   console.log('收到服务器内容: ' + res.data)
+    // })
+
+    // // 关闭WebSocket连接 监听websocket连接
+    // wx.onSocketClose(function (res) {
+    //   console.log('WebSocket 已关闭!')
+    // })
   },
   onReady: function () {
     // 页面渲染完成
@@ -106,13 +110,14 @@ Page({
   onUnload: function () {
     // 页面关闭
   },
-  getUserInfo(cb = () => {}) {
+  getUserInfo: function (cb) {
+    cb = !!cb && typeof cb == 'function' ? cb : function () {}
     var that = this
-    if (this.data.userInfo) {
-      typeof cb == "function" && cb(this.userInfo)
-    } else {
+      // if (this.data.userInfo) {
+      //   typeof cb == "function" && cb(this.userInfo)
+      // } else {
       //调用登录接口
-      wx.login({
+    wx.login({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
@@ -127,6 +132,6 @@ Page({
           })
         }
       })
-    }
+      // }
   }
 })

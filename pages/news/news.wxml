@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="textContainer">
+    <text class="textStyle">{{text}}</text>
+
+    <view class="user" wx:for="{{totalPeoples}}" wx:key="{item.id}">
+                  <view class="user-avatar" style="width: 200px; height: 200px;background-image: url({{item.avatarUrl}});"></view>
+      <view class="user-name">{{item.nickName}}</view>
+      <view class="user-city">{{item.city}}</view>
+      <view class="user-province">{{item.province}}</view>
+    </view>
+  </view>
+</view>
